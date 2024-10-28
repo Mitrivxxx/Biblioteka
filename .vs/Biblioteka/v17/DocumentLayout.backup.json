@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "F:\\Biblioteka\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5A7B1711-A7E9-4C1F-AA17-1294405992D9}|Biblioteka\\Biblioteka\\Biblioteka.csproj|f:\\biblioteka\\biblioteka\\biblioteka\\appshell.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}",
+      "RelativeMoniker": "D:0:0:{5A7B1711-A7E9-4C1F-AA17-1294405992D9}|Biblioteka\\Biblioteka\\Biblioteka.csproj|solutionrelative:biblioteka\\biblioteka\\appshell.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AppShell.xaml",
+              "DocumentMoniker": "F:\\Biblioteka\\Biblioteka\\Biblioteka\\AppShell.xaml",
+              "RelativeDocumentMoniker": "Biblioteka\\Biblioteka\\AppShell.xaml",
+              "ToolTip": "F:\\Biblioteka\\Biblioteka\\Biblioteka\\AppShell.xaml",
+              "RelativeToolTip": "Biblioteka\\Biblioteka\\AppShell.xaml",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAAAFEAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-28T09:50:11.736Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

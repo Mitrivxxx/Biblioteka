@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Biblioteka.Views.addPage">
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <Label Text="Add user"
+                   TextColor="Black"
+                   FontSize="Large"
+                HorizontalOptions="CenterAndExpand" />
+
+            <Label Text="Imię" FontSize="Medium"/>
+                <Entry x:Name="FirstNameEntry" Placeholder="Wpisz imię"/>
+
+                <Label Text="Nazwisko" FontSize="Medium"/>
+                <Entry x:Name="LastNameEntry" Placeholder="Wpisz nazwisko"/>
+
+                <Label Text="Rok Urodzenia" FontSize="Medium"/>
+                <Entry x:Name="BirthYearEntry" Placeholder="Wpisz rok urodzenia" Keyboard="Numeric"/>
+
+                <Label Text="Ulica Zamieszkania" FontSize="Medium"/>
+                <Entry x:Name="StreetEntry" Placeholder="Wpisz ulicę"/>
+
+                <Button Text="Dodaj Użytkownika"
+                BackgroundColor="LightBlue"
+                TextColor="White"
+                Clicked="Button_Clicked"/>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
