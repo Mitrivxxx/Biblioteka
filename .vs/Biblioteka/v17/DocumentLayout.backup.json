@@ -1,10 +1,42 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "F:\\Biblioteka\\",
+  "WorkspaceRootPath": "C:\\Users\\matis\\Desktop\\Biblioteka\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5A7B1711-A7E9-4C1F-AA17-1294405992D9}|Biblioteka\\Biblioteka\\Biblioteka.csproj|f:\\biblioteka\\biblioteka\\biblioteka\\appshell.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}",
+      "AbsoluteMoniker": "D:0:0:{5A7B1711-A7E9-4C1F-AA17-1294405992D9}|Biblioteka\\Biblioteka\\Biblioteka.csproj|c:\\users\\matis\\desktop\\biblioteka\\biblioteka\\biblioteka\\views\\addpage.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}",
+      "RelativeMoniker": "D:0:0:{5A7B1711-A7E9-4C1F-AA17-1294405992D9}|Biblioteka\\Biblioteka\\Biblioteka.csproj|solutionrelative:biblioteka\\biblioteka\\views\\addpage.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A7B1711-A7E9-4C1F-AA17-1294405992D9}|Biblioteka\\Biblioteka\\Biblioteka.csproj|c:\\users\\matis\\desktop\\biblioteka\\biblioteka\\biblioteka\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A7B1711-A7E9-4C1F-AA17-1294405992D9}|Biblioteka\\Biblioteka\\Biblioteka.csproj|solutionrelative:biblioteka\\biblioteka\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A7B1711-A7E9-4C1F-AA17-1294405992D9}|Biblioteka\\Biblioteka\\Biblioteka.csproj|c:\\users\\matis\\desktop\\biblioteka\\biblioteka\\biblioteka\\appshell.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}",
       "RelativeMoniker": "D:0:0:{5A7B1711-A7E9-4C1F-AA17-1294405992D9}|Biblioteka\\Biblioteka\\Biblioteka.csproj|solutionrelative:biblioteka\\biblioteka\\appshell.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A7B1711-A7E9-4C1F-AA17-1294405992D9}|Biblioteka\\Biblioteka\\Biblioteka.csproj|c:\\users\\matis\\desktop\\biblioteka\\biblioteka\\biblioteka\\views\\addpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A7B1711-A7E9-4C1F-AA17-1294405992D9}|Biblioteka\\Biblioteka\\Biblioteka.csproj|solutionrelative:biblioteka\\biblioteka\\views\\addpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A7B1711-A7E9-4C1F-AA17-1294405992D9}|Biblioteka\\Biblioteka\\Biblioteka.csproj|c:\\users\\matis\\desktop\\biblioteka\\biblioteka\\biblioteka\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A7B1711-A7E9-4C1F-AA17-1294405992D9}|Biblioteka\\Biblioteka\\Biblioteka.csproj|solutionrelative:biblioteka\\biblioteka\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A7B1711-A7E9-4C1F-AA17-1294405992D9}|Biblioteka\\Biblioteka\\Biblioteka.csproj|c:\\users\\matis\\desktop\\biblioteka\\biblioteka\\biblioteka\\app.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}",
+      "RelativeMoniker": "D:0:0:{5A7B1711-A7E9-4C1F-AA17-1294405992D9}|Biblioteka\\Biblioteka\\Biblioteka.csproj|solutionrelative:biblioteka\\biblioteka\\app.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A7B1711-A7E9-4C1F-AA17-1294405992D9}|Biblioteka\\Biblioteka\\Biblioteka.csproj|c:\\users\\matis\\desktop\\biblioteka\\biblioteka\\biblioteka\\isqlitedb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A7B1711-A7E9-4C1F-AA17-1294405992D9}|Biblioteka\\Biblioteka\\Biblioteka.csproj|solutionrelative:biblioteka\\biblioteka\\isqlitedb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6899BDA2-87B0-4B4A-9567-145D09FC2127}|Biblioteka\\Biblioteka.Android\\Biblioteka.Android.csproj|C:\\Users\\matis\\Desktop\\Biblioteka\\biblioteka\\biblioteka.android\\sqlitedb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6899BDA2-87B0-4B4A-9567-145D09FC2127}|Biblioteka\\Biblioteka.Android\\Biblioteka.Android.csproj|solutionrelative:biblioteka\\biblioteka.android\\sqlitedb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A7B1711-A7E9-4C1F-AA17-1294405992D9}|Biblioteka\\Biblioteka\\Biblioteka.csproj|c:\\users\\matis\\desktop\\biblioteka\\biblioteka\\biblioteka\\views\\usersview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A7B1711-A7E9-4C1F-AA17-1294405992D9}|Biblioteka\\Biblioteka\\Biblioteka.csproj|solutionrelative:biblioteka\\biblioteka\\views\\usersview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,17 +46,118 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "SQLiteDb.cs",
+              "DocumentMoniker": "C:\\Users\\matis\\Desktop\\Biblioteka\\Biblioteka\\Biblioteka.Android\\SQLiteDb.cs",
+              "RelativeDocumentMoniker": "Biblioteka\\Biblioteka.Android\\SQLiteDb.cs",
+              "ToolTip": "C:\\Users\\matis\\Desktop\\Biblioteka\\Biblioteka\\Biblioteka.Android\\SQLiteDb.cs",
+              "RelativeToolTip": "Biblioteka\\Biblioteka.Android\\SQLiteDb.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAsAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T21:30:14.99Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ISQLiteDb.cs",
+              "DocumentMoniker": "C:\\Users\\matis\\Desktop\\Biblioteka\\Biblioteka\\Biblioteka\\ISQLiteDb.cs",
+              "RelativeDocumentMoniker": "Biblioteka\\Biblioteka\\ISQLiteDb.cs",
+              "ToolTip": "C:\\Users\\matis\\Desktop\\Biblioteka\\Biblioteka\\Biblioteka\\ISQLiteDb.cs",
+              "RelativeToolTip": "Biblioteka\\Biblioteka\\ISQLiteDb.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T21:25:59.039Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\matis\\Desktop\\Biblioteka\\Biblioteka\\Biblioteka\\User.cs",
+              "RelativeDocumentMoniker": "Biblioteka\\Biblioteka\\User.cs",
+              "ToolTip": "C:\\Users\\matis\\Desktop\\Biblioteka\\Biblioteka\\Biblioteka\\User.cs",
+              "RelativeToolTip": "Biblioteka\\Biblioteka\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T21:23:56.428Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "addPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\matis\\Desktop\\Biblioteka\\Biblioteka\\Biblioteka\\Views\\addPage.xaml.cs",
+              "RelativeDocumentMoniker": "Biblioteka\\Biblioteka\\Views\\addPage.xaml.cs",
+              "ToolTip": "C:\\Users\\matis\\Desktop\\Biblioteka\\Biblioteka\\Biblioteka\\Views\\addPage.xaml.cs",
+              "RelativeToolTip": "Biblioteka\\Biblioteka\\Views\\addPage.xaml.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABgAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T21:13:40.635Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "usersView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\matis\\Desktop\\Biblioteka\\Biblioteka\\Biblioteka\\Views\\usersView.xaml.cs",
+              "RelativeDocumentMoniker": "Biblioteka\\Biblioteka\\Views\\usersView.xaml.cs",
+              "ToolTip": "C:\\Users\\matis\\Desktop\\Biblioteka\\Biblioteka\\Biblioteka\\Views\\usersView.xaml.cs",
+              "RelativeToolTip": "Biblioteka\\Biblioteka\\Views\\usersView.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T21:09:20.392Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\matis\\Desktop\\Biblioteka\\Biblioteka\\Biblioteka\\App.xaml.cs",
+              "RelativeDocumentMoniker": "Biblioteka\\Biblioteka\\App.xaml.cs",
+              "ToolTip": "C:\\Users\\matis\\Desktop\\Biblioteka\\Biblioteka\\Biblioteka\\App.xaml.cs",
+              "RelativeToolTip": "Biblioteka\\Biblioteka\\App.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T21:09:02.425Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\matis\\Desktop\\Biblioteka\\Biblioteka\\Biblioteka\\App.xaml",
+              "RelativeDocumentMoniker": "Biblioteka\\Biblioteka\\App.xaml",
+              "ToolTip": "C:\\Users\\matis\\Desktop\\Biblioteka\\Biblioteka\\Biblioteka\\App.xaml",
+              "RelativeToolTip": "Biblioteka\\Biblioteka\\App.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-28T21:08:33.685Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "addPage.xaml",
+              "DocumentMoniker": "C:\\Users\\matis\\Desktop\\Biblioteka\\Biblioteka\\Biblioteka\\Views\\addPage.xaml",
+              "RelativeDocumentMoniker": "Biblioteka\\Biblioteka\\Views\\addPage.xaml",
+              "ToolTip": "C:\\Users\\matis\\Desktop\\Biblioteka\\Biblioteka\\Biblioteka\\Views\\addPage.xaml*",
+              "RelativeToolTip": "Biblioteka\\Biblioteka\\Views\\addPage.xaml*",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAADQAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-28T18:55:46.267Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "AppShell.xaml",
-              "DocumentMoniker": "F:\\Biblioteka\\Biblioteka\\Biblioteka\\AppShell.xaml",
+              "DocumentMoniker": "C:\\Users\\matis\\Desktop\\Biblioteka\\Biblioteka\\Biblioteka\\AppShell.xaml",
               "RelativeDocumentMoniker": "Biblioteka\\Biblioteka\\AppShell.xaml",
-              "ToolTip": "F:\\Biblioteka\\Biblioteka\\Biblioteka\\AppShell.xaml",
+              "ToolTip": "C:\\Users\\matis\\Desktop\\Biblioteka\\Biblioteka\\Biblioteka\\AppShell.xaml",
               "RelativeToolTip": "Biblioteka\\Biblioteka\\AppShell.xaml",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAAAFEAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAADkAAAAAAAAAAAAAAFMAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-10-28T09:50:11.736Z",
               "EditorCaption": ""

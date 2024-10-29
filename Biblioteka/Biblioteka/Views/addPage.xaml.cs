@@ -15,15 +15,30 @@ namespace Biblioteka.Views
         public addPage()
         {
             InitializeComponent();
+            LoadUsers();
         }
 
         private void Button_Clicked(object sender, EventArgs e)
         {
-            string firstName = FirstNameEntry.Text;
-            string lastName = LastNameEntry.Text;
-            string birthYear = BirthYearEntry.Text;
-            string street = StreetEntry.Text;
+            var user = new User
+            {
+                FirstName = FirstNameEntry.Text,
+                LastName = LastNameEntry.Text,
+                BirthYear = int.Parse(BirthYearEntry.Text),
+                AdressEmail = AdressEmailEntry.Text
+            };
 
+            var db = DependencyService.Get<ISQLiteDb>().GetConnection();
+            db.Insert(user);
+
+            LoadUsers();
+        }
+
+        private void LoadUsers()
+        {
+            var db = DependencyService.Get<ISQLiteDb>().GetConnection();
+            var users = db.Table<User>().ToList();
+            UsersListView.ItemsSource = users;
         }
     }
 }

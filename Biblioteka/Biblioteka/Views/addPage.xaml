@@ -2,31 +2,60 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Biblioteka.Views.addPage">
-    <ContentPage.Content>
-        <StackLayout Padding="20">
-            <Label Text="Add user"
-                   TextColor="Black"
-                   FontSize="Large"
-                HorizontalOptions="CenterAndExpand" />
 
-            <Label Text="Imię" FontSize="Medium"/>
-                <Entry x:Name="FirstNameEntry" Placeholder="Wpisz imię"/>
+        
+            <StackLayout Padding="20">
+        <Entry x:Name="FirstNameEntry" Placeholder="Imię" PlaceholderColor="Gray" TextColor="Black" />
+        <Entry x:Name="LastNameEntry" Placeholder="Nazwisko"  PlaceholderColor="Gray" TextColor="Black" />
+        <Entry x:Name="BirthYearEntry" Placeholder="Rok urodzenia" Keyboard="Numeric"  PlaceholderColor="Gray" TextColor="Black" />
+        <Entry x:Name="AdressEmailEntry" Placeholder="Adress email"  PlaceholderColor="Gray" TextColor="Black" />
+                
+        <Button Text="Dodaj użytkownika" Clicked="Button_Clicked" />
+    
+    <!--
+        <ListView x:Name="UsersListView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding FirstName}" Detail="{Binding LastName}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        
+        
+        -->
+        <ListView  HasUnevenRows="True" BackgroundColor="White"  x:Name="UsersListView">
+        <ListView.Header>
+            <ContentView Padding="0,5" BackgroundColor="White">
+                <Label FontSize="Large" TextColor="black"
+                   Text="Users" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+            </ContentView>
+        </ListView.Header>
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                            <ColumnDefinition  />
+                        </Grid.ColumnDefinitions>
+                            <StackLayout VerticalOptions="FillAndExpand" Padding="5" Grid.Column="0">
+                                <Image Source="icon_users.png" WidthRequest="50" HeightRequest="50" Aspect="AspectFill"/>
+                            </StackLayout>
+                            <StackLayout VerticalOptions="FillAndExpand" Padding="5" Grid.Column="1">
+                            <Label TextColor="Black" FontSize="17"  Text="{Binding FullName}"/>
+                                <Label TextColor="Black" FontSize="12" Text="{Binding BirthYear, StringFormat='Bitrh year: {0}'}" />
+                        </StackLayout>
+                        <StackLayout VerticalOptions="End"  Padding="5"  Grid.Column="2">
+                                <Label TextColor="Black" FontSize="12"  Text="{Binding AdressEmail, StringFormat='email address: {0}'}" />
+                        </StackLayout>
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
 
-                <Label Text="Nazwisko" FontSize="Medium"/>
-                <Entry x:Name="LastNameEntry" Placeholder="Wpisz nazwisko"/>
-
-                <Label Text="Rok Urodzenia" FontSize="Medium"/>
-                <Entry x:Name="BirthYearEntry" Placeholder="Wpisz rok urodzenia" Keyboard="Numeric"/>
-
-                <Label Text="Ulica Zamieszkania" FontSize="Medium"/>
-                <Entry x:Name="StreetEntry" Placeholder="Wpisz ulicę"/>
-
-                <Button Text="Dodaj Użytkownika"
-                BackgroundColor="LightBlue"
-                TextColor="White"
-                Clicked="Button_Clicked"/>
 
 
-        </StackLayout>
-    </ContentPage.Content>
+    </StackLayout>
 </ContentPage>

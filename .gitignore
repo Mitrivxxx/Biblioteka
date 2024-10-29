@@ -1,0 +1,78 @@
+# System plików
+[Dd]ebug*/
+[Rr]elease*/
+[Bb]in/
+[Oo]bj/
+
+# Konfiguracje i pliki IDE
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Pakiety NuGet
+*.nupkg
+*.snupkg
+**/packages/*
+# Jeśli chcesz zachować `packages.config`, usuń następujący wiersz
+**/packages.config
+
+# Konfiguracje platformy
+*.DS_Store
+*.vs/
+
+# Konfiguracje macOS i Windows
+._*
+*.orig
+*.swp
+*.bak
+*.swl
+[Tt]humbs.db
+
+# Pliki kompilacji Androida
+*.apk
+*.ap_
+*.dex
+*.keystore
+*.jks
+
+# Pliki kompilacji iOS
+build/
+DerivedData/
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.xcuserstate
+*.xcworkspace/
+!default.mode1v3
+!default.mode2v3
+!default.pbxuser
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Xamarin
+*.mdb
+*.pidb
+*.svd
+*.pdb
+*.tmp
+*.tmp.*
+
+# Logi i pliki tymczasowe
+*.log
+*.tlog
+*.vscode/*
+*.ipch
+*.aps
+*.rsp
+.vscode
+*.tlog
+*.idb
+
+# Pliki testowe
+TestResult.xml
+TestResult-*.xml

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Biblioteka\\Biblioteka\\Biblioteka\\Biblioteka.csproj": {}
+    "C:\\Users\\matis\\Desktop\\Biblioteka\\Biblioteka\\Biblioteka\\Biblioteka.csproj": {}
   },
   "projects": {
-    "F:\\Biblioteka\\Biblioteka\\Biblioteka\\Biblioteka.csproj": {
+    "C:\\Users\\matis\\Desktop\\Biblioteka\\Biblioteka\\Biblioteka\\Biblioteka.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Biblioteka\\Biblioteka\\Biblioteka\\Biblioteka.csproj",
+        "projectUniqueName": "C:\\Users\\matis\\Desktop\\Biblioteka\\Biblioteka\\Biblioteka\\Biblioteka.csproj",
         "projectName": "Biblioteka",
-        "projectPath": "F:\\Biblioteka\\Biblioteka\\Biblioteka\\Biblioteka.csproj",
+        "projectPath": "C:\\Users\\matis\\Desktop\\Biblioteka\\Biblioteka\\Biblioteka\\Biblioteka.csproj",
         "packagesPath": "C:\\Users\\matis\\.nuget\\packages\\",
-        "outputPath": "F:\\Biblioteka\\Biblioteka\\Biblioteka\\obj\\",
+        "outputPath": "C:\\Users\\matis\\Desktop\\Biblioteka\\Biblioteka\\Biblioteka\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -65,6 +65,10 @@
             "Xamarin.Forms": {
               "target": "Package",
               "version": "[5.0.0.2196, )"
+            },
+            "sqlite-net-pcl": {
+              "target": "Package",
+              "version": "[1.9.172, )"
             }
           },
           "imports": [

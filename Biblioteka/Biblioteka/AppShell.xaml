@@ -81,7 +81,7 @@
     <FlyoutItem Title="Uesrs" Icon="icon_users.png">
         <ShellContent Route="usersView" ContentTemplate="{DataTemplate local:usersView}" />
     </FlyoutItem>
-    <FlyoutItem Title="Books" Icon="open-book.png">
+    <FlyoutItem Title="Books" Icon="icon_book.png">
         <ShellContent Route="booksView" ContentTemplate="{DataTemplate local:booksView}" />
     </FlyoutItem>
 
