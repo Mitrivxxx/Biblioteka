@@ -1,0 +1,67 @@
+# Build Folders
+bin/
+obj/
+
+# Visual Studio Code
+.vscode/
+.history/
+
+# User-specific files
+*.user
+*.userosscache
+*.suo
+*.userprefs
+*.csproj.user
+
+# Mono Auto Generated Files
+mono_crash.*
+
+# Xamarin Stuff
+.vscode/
+*.sln*
+*.csproj*
+.project
+.idea/
+.DS_Store
+
+# macOS
+*.DS_Store
+
+# Windows Image File Caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config
+.vs/
+*.orig
+
+# Uncomment if you have Bower dependencies
+#bower_components/
+#wwwroot/lib/
+
+# NuGet packages
+*.nupkg
+# The packages folder can be ignored because of Package Restore
+**/packages/
+# except build/, which is used as an MSBuild target.
+!**/packages/build/
+# Uncomment if necessary however generally it will be regenerated when needed
+# **/packages/repositories.config
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+.vscode/*
+
+# Visual Studio temporary files
+.vs/
+.cache/
+*.log
+*.swp
+*.sln.docstates
+
+# Rider project files
+.idea/
+*.sln.iml

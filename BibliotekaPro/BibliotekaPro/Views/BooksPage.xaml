@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BibliotekaPro.Views.BooksPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add" x:Name="ToolbarItem" Clicked="ToolbarItem_Clicked"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <SearchBar Placeholder="Search" TextChanged="searchInput_TextChanged" x:Name="searchInput"></SearchBar>
+
+            <ListView IsRefreshing="True" x:Name="BookListView" ItemsSource="{Binding book}" HasUnevenRows="True" ItemTapped="BookListView_ItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Padding="5">
+                                <Image Source="{Binding Image}" HeightRequest="60" WidthRequest="60"></Image>
+                                <StackLayout HorizontalOptions="StartAndExpand" >
+                                    <Label TextColor="Black" Text="{Binding Name}" FontSize="Medium"></Label>
+                                    <Label TextColor="Black" Text="{Binding Author}"></Label>
+                                </StackLayout>
+                                <StackLayout VerticalOptions="Center" HorizontalOptions="EndAndExpand">
+                                    <Image Source="icon_edit.png" HeightRequest="30" WidthRequest="30">
+                                        <Image.GestureRecognizers>
+                                            <TapGestureRecognizer x:Name="tapEdit" Tapped="tapEdit_Tapped" CommandParameter="{Binding Id}"></TapGestureRecognizer>
+                                        </Image.GestureRecognizers>
+                                    </Image>
+                                    <Image Source="icon_bin.png" HeightRequest="30" WidthRequest="30">
+                                        <Image.GestureRecognizers>
+                                            <TapGestureRecognizer x:Name="tapBin" Tapped="tapBin_Tapped"  CommandParameter="{Binding Id}"></TapGestureRecognizer>
+                                        </Image.GestureRecognizers>
+                                    </Image>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
