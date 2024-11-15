@@ -15,14 +15,32 @@ namespace BibliotekaPro
         FirebaseClient firebaseClient = new FirebaseClient("https://bibliotekapro-eeddd-default-rtdb.firebaseio.com/");
 
         //add 
-        //typ generyczny <T>
-        public async Task<bool> Save<T>(T obj)
+/*        public async Task<bool> Save<T>(T obj)
         {
             var collectionName = typeof(T).Name;
             var data = await firebaseClient.Child(collectionName).PostAsync(JsonConvert.SerializeObject(obj));
 
             return !string.IsNullOrEmpty(data.Key);
+        }*/
+
+        public async Task<bool> Save<T>(T obj, string base64Image = null)
+        {
+            // Jeśli obiekt ma właściwość "Image", ustaw ją
+            if (!string.IsNullOrEmpty(base64Image))
+            {
+                var imageProperty = typeof(T).GetProperty("Image");
+                if (imageProperty != null && imageProperty.PropertyType == typeof(string))
+                {
+                    imageProperty.SetValue(obj, base64Image);
+                }
+            }
+
+            var collectionName = typeof(T).Name;
+            var data = await firebaseClient.Child(collectionName).PostAsync(JsonConvert.SerializeObject(obj));
+
+            return !string.IsNullOrEmpty(data.Key);
         }
+
         //save /get all
         public async Task<List<T>> GetAll<T>() where T : class, new()
         {
@@ -64,6 +82,19 @@ namespace BibliotekaPro
         {
             await firebaseClient.Child(nameof(User) + "/" + id).DeleteAsync();
             return true;
+        }
+        //save to database
+        public async Task<bool> SaveImageAsync(string base64Image, string imageName)
+        {
+            var imageData = new
+            {
+                Name = imageName,
+                Image = base64Image
+            };
+
+            var data = await firebaseClient.Child("Images").PostAsync(JsonConvert.SerializeObject(imageData));
+
+            return !string.IsNullOrEmpty(data.Key);
         }
     }
 }

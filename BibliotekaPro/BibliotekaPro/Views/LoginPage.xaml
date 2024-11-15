@@ -1,14 +1,40 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d"
-             x:Class="BibliotekaPro.Views.LoginPage"
-             Shell.NavBarIsVisible="False">
+             x:Class="BibliotekaPro.Views.LoginPage">
     <ContentPage.Content>
-        <StackLayout Padding="10,0,10,0" VerticalOptions="Center">
-            <Button VerticalOptions="Center" Text="Login" Command="{Binding LoginCommand}"/>
+        <StackLayout Padding="30" WidthRequest="500" HeightRequest="1000" BackgroundColor="Blue" x:Name="stackLayoutLogin">
+
+            <!-- Etykieta Tytułu -->
+            <Label Text="Zaloguj się"
+                   x:Name="labelZalogujsie"
+               FontSize="Large"
+               HorizontalOptions="Center" />
+
+            <!-- Pole na login -->
+            <Entry x:Name="UsernameEntry"
+               Placeholder="Login"
+               Keyboard="Email"
+               Margin="0,20,0,0" />
+
+            <!-- Pole na hasło -->
+            <Entry x:Name="PasswordEntry"
+               Placeholder="Hasło"
+               IsPassword="True" />
+
+            <!-- Przycisk logowania -->
+            <Button Text="Zaloguj się"
+                BackgroundColor="#4CAF50"
+                TextColor="White"
+                Margin="0,20,0,0"
+                 Clicked="Button_Clicked"/>
+
+            <!-- Link do rejestracji -->
+            <Label Text="Nie masz konta? Zarejestruj się"
+               TextColor="Blue"
+               HorizontalOptions="Center"
+               Padding="0,20,0,0" />
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

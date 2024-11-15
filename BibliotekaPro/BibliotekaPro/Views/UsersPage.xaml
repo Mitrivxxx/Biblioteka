@@ -3,12 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BibliotekaPro.Views.UsersPage">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Add" x:Name="ToolbarItem" Clicked="ToolbarItem_Clicked"></ToolbarItem>
+        <ToolbarItem Text="Add" Clicked="ToolbarItem_Clicked"></ToolbarItem>
         
     </ContentPage.ToolbarItems>
     
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout WidthRequest="500" HeightRequest="1000" x:Name="backColor">
             <SearchBar Placeholder="Search" TextChanged="searchInput_TextChanged" x:Name="searchInput"></SearchBar>
             
             <ListView IsRefreshing="True" x:Name="UserListView" ItemsSource="{Binding user}" HasUnevenRows="True" ItemTapped="UserListView_ItemTapped">
@@ -18,11 +18,11 @@
                             <StackLayout Orientation="Horizontal" Padding="5">
                                 <Image Source="{Binding Image}" HeightRequest="60" WidthRequest="60"></Image>
                                 <StackLayout HorizontalOptions="StartAndExpand" >
-                                    <Label TextColor="Black" Text="{Binding Name}" FontSize="Medium"></Label>
-                                    <Label TextColor="Black" Text="{Binding Email}"></Label>                              
+                                    <Label TextColor="Black" x:Name="labelName" Text="{Binding Name}" FontSize="Medium"></Label>
+                                    <Label TextColor="Black" x:Name="labelEmail" Text="{Binding Email}"></Label>                              
                                 </StackLayout>
                                 <StackLayout VerticalOptions="Center" HorizontalOptions="EndAndExpand">
-                                    <Image Source="icon_edit.png" HeightRequest="30" WidthRequest="30">
+                                    <Image Source="{Binding Image}" HeightRequest="30" WidthRequest="30">
                                         <Image.GestureRecognizers>
                                             <TapGestureRecognizer x:Name="tapEdit" Tapped="TapGestureRecognizer_Tapped" CommandParameter="{Binding Id}"></TapGestureRecognizer>
                                         </Image.GestureRecognizers>

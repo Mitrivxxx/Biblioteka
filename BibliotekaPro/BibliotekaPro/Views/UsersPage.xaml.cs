@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Android.Media.TV;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -95,5 +96,10 @@ namespace BibliotekaPro.Views
                 OnAppearing();
             }
         }
+
+
+
+
+
     }
 }
