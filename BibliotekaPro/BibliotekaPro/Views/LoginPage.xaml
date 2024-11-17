@@ -12,13 +12,13 @@
                HorizontalOptions="Center" />
 
             <!-- Pole na login -->
-            <Entry x:Name="UsernameEntry"
+            <Entry x:Name="entryLogin"
                Placeholder="Login"
                Keyboard="Email"
                Margin="0,20,0,0" />
 
             <!-- Pole na hasło -->
-            <Entry x:Name="PasswordEntry"
+            <Entry x:Name="entryPassword"
                Placeholder="Hasło"
                IsPassword="True" />
 

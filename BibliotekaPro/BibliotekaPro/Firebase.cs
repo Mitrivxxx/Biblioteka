@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.Forms;
 
 namespace BibliotekaPro
 {
@@ -65,6 +66,60 @@ namespace BibliotekaPro
             {
                 Console.WriteLine($"Error fetching data: {ex.Message}");
                 return new List<T>(); // W przypadku błędu zwróć pustą listę
+            }
+        }
+        // dostaj dane o urzytkowniku po udanym logowaniu
+        public async Task<User> GetUserDataAsync(string login)
+        {
+            // Pobierz użytkownika z Firebase na podstawie loginu
+            var users = await firebaseClient.Child("User").OnceAsync<User>();
+            var user = users.FirstOrDefault(u => u.Object.Login == login)?.Object;
+
+            return user;
+        }
+        public async Task<bool> Login(string username, string password)
+        {
+            // Załóżmy, że masz bazę danych lub Firebase, w której zapisujesz użytkowników.
+            var user = await GetUserDataAsync(username);
+
+            if (user != null && user.Password == password)
+            {
+                // Zalogowano pomyślnie, przekazujemy dane użytkownika do AppShell.
+                Application.Current.Properties["user"] = JsonConvert.SerializeObject(user);
+                return true;
+            }
+
+            return false;
+        }
+        //login
+        public async Task<User> LoginAsync(string login, string password)
+        {
+            try
+            {
+                // Pobieramy dane użytkowników z bazy danych
+                var users = await firebaseClient.Child("User").OnceAsync<User>();
+
+                // Przeszukujemy użytkowników w bazie
+                var user = users.FirstOrDefault(u => u.Object.Login == login);
+
+                if (user != null)
+                {
+                    // Sprawdzamy, czy hasło się zgadza
+                    if (user.Object.Password == password)
+                    {
+                        // Zwracamy obiekt użytkownika po poprawnym logowaniu
+                        return user.Object;
+                    }
+                }
+
+                // Login lub hasło są niepoprawne
+                return null;
+            }
+            catch (Exception ex)
+            {
+                // Obsługuje błędy
+                Console.WriteLine($"Error: {ex.Message}");
+                return null;
             }
         }
         //search
