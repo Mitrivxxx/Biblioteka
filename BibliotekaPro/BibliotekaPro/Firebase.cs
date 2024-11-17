@@ -44,16 +44,28 @@ namespace BibliotekaPro
         //save /get all
         public async Task<List<T>> GetAll<T>() where T : class, new()
         {
-            return (await firebaseClient.Child(typeof(T).Name).OnceAsync<T>()).Select(item =>
+            try
             {
-                var obj = item.Object;
-                // Jeśli obiekt ma właściwość Id, ustaw ją ręcznie
-                if (obj is IUserWithId identifiable)
+                var items = await firebaseClient.Child(typeof(T).Name).OnceAsync<T>();
+
+                return items.Select(item =>
                 {
-                    identifiable.Id = item.Key;
-                }
-                return obj;
-            }).ToList();
+                    var obj = item.Object;
+
+                    // Jeśli obiekt implementuje IUserWithId, ustawiamy Id
+                    if (obj is IUserWithId identifiable)
+                    {
+                        identifiable.Id = item.Key; // Ustawiamy Id na podstawie klucza z Firebase
+                    }
+
+                    return obj;
+                }).ToList();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error fetching data: {ex.Message}");
+                return new List<T>(); // W przypadku błędu zwróć pustą listę
+            }
         }
         //search
         public async Task<List<User>> SearchByName(string name)

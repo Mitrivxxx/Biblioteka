@@ -10,6 +10,9 @@
 
             <Entry x:Name="entryName" Placeholder="Entry your name"></Entry>
             <Entry x:Name="entryEmail" Placeholder="Entry your email"></Entry>
+
+            <Entry x:Name="entryLogin" Placeholder="Entry your login"></Entry>
+            <Entry x:Name="entryPassword" Placeholder="Entry your password"></Entry>
             <Button Text="Save" x:Name="buttonSave" CornerRadius="15" Clicked="buttonSave_Clicked"></Button>
         
         </StackLayout>

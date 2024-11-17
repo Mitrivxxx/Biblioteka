@@ -22,7 +22,9 @@ namespace BibliotekaPro.Views
         {
 			string name = entryName.Text;
 			string email = entryEmail.Text;
-			if(string.IsNullOrEmpty(name))
+            string login = entryName.Text;
+            string password = entryEmail.Text;
+            if (string.IsNullOrEmpty(name))
 			{
 				await DisplayAlert("Warning", "Please enter your name", "Cancel");
 			}
@@ -30,13 +32,23 @@ namespace BibliotekaPro.Views
             {
                 await DisplayAlert("Warning", "Please enter your email", "Cancel");
             }
+            if (string.IsNullOrEmpty(login))
+            {
+                await DisplayAlert("Warning", "Please enter your login", "Cancel");
+            }
+            if (string.IsNullOrEmpty(password))
+            {
+                await DisplayAlert("Warning", "Please enter your password", "Cancel");
+            }
 
-			User user = new User();
+            User user = new User();
 			user.Name = name;
 			user.Email = email;
+            user.Login = login;
+            user.Password = password;
 
 
-			var isSaved = await firebase.Save(user);
+            var isSaved = await firebase.Save(user);
         
 			if(isSaved)
 			{
@@ -55,6 +67,8 @@ namespace BibliotekaPro.Views
 		{
 			entryName.Text = "";
 			entryEmail.Text = "";
-		}
+            entryLogin.Text = "";
+            entryPassword.Text = "";
+        }
     }
 }

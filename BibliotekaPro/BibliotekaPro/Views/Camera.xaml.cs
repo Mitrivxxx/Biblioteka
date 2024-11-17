@@ -16,6 +16,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.PlatformConfiguration;
 using Xamarin.Forms.Xaml;
 using Color = Xamarin.Forms.Color;
+using SkiaSharp;
 
 
 namespace BibliotekaPro.Views
@@ -166,8 +167,12 @@ namespace BibliotekaPro.Views
         // zapis obrazka do bazy danych
         private async void Button_Clicked_2(object sender, EventArgs e)
         {
-            /*try
+            string base64Image = null;
+
+            try
             {
+                Console.WriteLine("Starting image selection...");
+
                 // Wybór obrazu z galerii
                 var result = await FilePicker.PickAsync(new PickOptions
                 {
@@ -175,52 +180,104 @@ namespace BibliotekaPro.Views
                     FileTypes = FilePickerFileType.Images
                 });
 
-                if (result != null)
+                Console.WriteLine(result != null
+                    ? $"File selected: {result.FileName}"
+                    : "No file selected.");
+
+                if (result == null)
                 {
-                    using (var stream = await result.OpenReadAsync())
-                    {
-                        // Kopiowanie strumienia do pamięci
-                        using (var memoryStream = new MemoryStream())
-                        {
-                            await stream.CopyToAsync(memoryStream);
-
-                            // Uzyskanie bajtów obrazu
-                            var imageBytes = memoryStream.ToArray();
-
-                            // Konwersja na Base64
-                            var base64Image = Convert.ToBase64String(imageBytes);
-
-                      // Tworzenie obiektu użytkownika z obrazem
-                            var userWithImage = new User
-                            {
-                                Name = "Jane Smith",
-                                Email = "janesmith@example.com",
-                                Image = base64Image // Zapis Base64 do właściwości Image
-                            };
- 
-
-                            // Zapis do Firebase
-                            var isSavedWithImage = await firebase.Save(userWithImage);
-                            if (isSavedWithImage)
-                            {
-                                await DisplayAlert("User saved successfully with an image!", "", "");
-                            }
-                            else
-                            {
-                                await DisplayAlert("Failed to save the user.", "", "");
-                            }
-                        }
-                    }
+                    // Ustawienie domyślnego obrazu, gdy użytkownik nie wybierze pliku
+                    base64Image = GetDefaultBase64Image();
+                    Console.WriteLine("Default image set.");
                 }
                 else
                 {
-                    await DisplayAlert("No image selected.", "", "");
+                    // Otwieranie strumienia pliku
+                    using (var originalStream = await result.OpenReadAsync())
+                    {
+                        if (originalStream == null)
+                        {
+                            throw new Exception("Could not open file stream.");
+                        }
+
+                        Console.WriteLine("File stream opened successfully.");
+
+                        // Przeskalowanie obrazu do 20x20 pikseli
+                        var resizedImageBytes = ResizeImageTo20x20(originalStream);
+
+                        Console.WriteLine("Image resized successfully.");
+
+                        // Konwersja przeskalowanego obrazu do Base64
+                        base64Image = Convert.ToBase64String(resizedImageBytes);
+
+                        Console.WriteLine("Image converted to Base64 successfully.");
+                    }
+                }
+
+                // Tworzenie obiektu użytkownika z obrazem
+                var userWithImage = new User
+                {
+                    Name = "Jane Smith",
+                    Email = "janesmith@example.com",
+                    Image = base64Image // Zapis Base64 do właściwości Image
+                };
+
+                Console.WriteLine("User object created successfully.");
+
+                // Zapis do Firebase
+                var isSavedWithImage = await firebase.Save(userWithImage);
+
+                if (isSavedWithImage)
+                {
+                    await DisplayAlert("User saved successfully with an image!", "", "");
+                    Console.WriteLine("User saved successfully.");
+                }
+                else
+                {
+                    await DisplayAlert("Failed to save the user.", "", "");
+                    Console.WriteLine("Failed to save the user.");
                 }
             }
             catch (Exception ex)
             {
-                await DisplayAlert($"Error: {ex.Message}", "", "");
-            }*/
+                Console.WriteLine($"Exception caught: {ex.Message}");
+                await DisplayAlert("Error", $"An error occurred: {ex.Message}", "OK");
+
+                // Zapewnienie, że nawet w przypadku błędu będzie domyślne zdjęcie
+                if (string.IsNullOrEmpty(base64Image))
+                {
+                    base64Image = GetDefaultBase64Image();
+                    Console.WriteLine("Default image set due to error.");
+                }
+            }
+
+        }
+        private string GetDefaultBase64Image()
+        {
+            // Możesz tutaj dodać Base64 dla swojego domyślnego obrazu
+            return "puste";
+        }
+        // Funkcja do przeskalowania obraz
+        private byte[] ResizeImageTo20x20(System.IO.Stream originalStream)
+        {
+            using (var inputStream = new SKManagedStream(originalStream))
+            {
+                var originalBitmap = SKBitmap.Decode(inputStream);
+
+                // Tworzenie nowego bitmapu o rozdzielczości 20x20
+                var resizedBitmap = originalBitmap.Resize(new SKImageInfo(20, 20), SKFilterQuality.High);
+
+                if (resizedBitmap == null)
+                {
+                    throw new Exception("Failed to resize the image.");
+                }
+
+                using (var image = SKImage.FromBitmap(resizedBitmap))
+                using (var data = image.Encode(SKEncodedImageFormat.Png, 100)) // PNG o wysokiej jakości
+                {
+                    return data.ToArray(); // Zwrócenie bajtów przeskalowanego obrazu
+                }
+            }
         }
     }
 }
