@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BibliotekaPro.Views.CreateAccount">
+    <ScrollView>
+        <StackLayout Padding="30" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" BackgroundColor="Blue" HeightRequest="1000" WidthRequest="400">
+            <!-- Logo -->
+            <Button 
+                    ImageSource="icon_users.png"
+                    TextColor="White" 
+                    BackgroundColor="#0056A1" 
+                    CornerRadius="25" 
+                    HeightRequest="50" 
+                    FontAttributes="Bold" 
+                    HorizontalOptions="FillAndExpand" 
+                    Clicked="Button_Clicked_1"
+                    />
+            <Image Source="icon_books.png" Margin="20" HeightRequest="100" WidthRequest="100" VerticalOptions="Center" />
+
+            <!-- Title -->
+            <Label Text="CREATE AN ACCOUNT" 
+                   FontSize="30" 
+                   TextColor="White" 
+                   HorizontalOptions="Center" />
+            <Label Text="Stay with us for a while" 
+                   FontSize="18" 
+                   TextColor="White" 
+                   HorizontalOptions="Center" 
+                   Margin="0,0,0,20" />
+            <Frame CornerRadius="20"
+           HasShadow="True"
+           BackgroundColor="White"
+           Padding="20"
+           Margin="20">
+                <StackLayout>
+                    <Label Text="Welcome!" 
+FontSize="24" 
+FontAttributes="Bold" 
+TextColor="Blue" 
+HorizontalOptions="Center" 
+Margin="0,20,0,10" />
+                    <Entry Placeholder="Name"
+                           x:Name="entryName"
+                   TextColor="Black" 
+                   PlaceholderColor="Gray" 
+                   BackgroundColor="White" 
+                   Margin="0,0,0,10" />
+
+            <!-- Surname Entry -->
+            <Entry Placeholder="Surname" 
+                   x:Name="entryName_2"
+                   TextColor="Black" 
+                   PlaceholderColor="Gray" 
+                   BackgroundColor="White" 
+                   Margin="0,0,0,10" />
+
+            <!-- Email Entry -->
+            <Entry Placeholder="Email" 
+                   x:Name="entryEmail"
+                   TextColor="Black" 
+                   PlaceholderColor="Gray" 
+                   BackgroundColor="White" 
+                   Keyboard="Email" 
+                   Margin="0,0,0,10" />
+
+            <!-- Login Entry -->
+            <Entry Placeholder="Login" 
+                   x:Name="entryLogin"
+                   TextColor="Black" 
+                   PlaceholderColor="Gray" 
+                   BackgroundColor="White" 
+                   Margin="0,0,0,10" />
+
+            <!-- Password Entry -->
+            <Entry Placeholder="Password" 
+                   x:Name="entryPassword"
+                   TextColor="Black" 
+                   PlaceholderColor="Gray" 
+                   BackgroundColor="White" 
+                   IsPassword="True" 
+                   Margin="0,0,0,20" />
+             <Entry Placeholder="Confirm password" 
+                   x:Name="entryPassword_2"
+                   TextColor="Black" 
+                   PlaceholderColor="Gray" 
+                   BackgroundColor="White" 
+                   IsPassword="True" 
+                   Margin="0,0,0,20" />
+
+                    <!-- Create Account Button -->
+            <Button Text="UTWÓRZ KONTO" 
+                    TextColor="White" 
+                    BackgroundColor="#0056A1" 
+                    CornerRadius="25" 
+                    HeightRequest="50" 
+                    FontAttributes="Bold" 
+                    HorizontalOptions="FillAndExpand" 
+                    Clicked="Button_Clicked"
+                    />
+                    
+                </StackLayout>
+                            <!-- Name Entry -->
+            
+                
+            </Frame>
+
+
+            
+        </StackLayout>
+
+
+    </ScrollView>
+</ContentPage>

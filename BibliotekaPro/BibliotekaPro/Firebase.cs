@@ -94,8 +94,6 @@ namespace BibliotekaPro
         //login
         public async Task<User> LoginAsync(string login, string password)
         {
-            try
-            {
                 // Pobieramy dane użytkowników z bazy danych
                 var users = await firebaseClient.Child("User").OnceAsync<User>();
 
@@ -111,16 +109,8 @@ namespace BibliotekaPro
                         return user.Object;
                     }
                 }
-
                 // Login lub hasło są niepoprawne
                 return null;
-            }
-            catch (Exception ex)
-            {
-                // Obsługuje błędy
-                Console.WriteLine($"Error: {ex.Message}");
-                return null;
-            }
         }
         //search
         public async Task<List<User>> SearchByName(string name)

@@ -18,6 +18,7 @@ namespace BibliotekaPro
         {
             InitializeComponent();
             Routing.RegisterRoute("LoginUserInformation", typeof(LoginUserInformation));
+            Routing.RegisterRoute("CreateAccount", typeof(CreateAccount));
             Routing.RegisterRoute(nameof(ItemDetailPage), typeof(ItemDetailPage));
             Routing.RegisterRoute(nameof(NewItemPage), typeof(NewItemPage));
             Routing.RegisterRoute("appshell", typeof(AppShell));

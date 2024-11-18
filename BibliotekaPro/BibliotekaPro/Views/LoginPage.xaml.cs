@@ -22,10 +22,8 @@ namespace BibliotekaPro.Views
 
         private async void Button_Clicked(object sender, EventArgs e)
         {
-            var login = entryLogin.Text;  // Załóżmy, że masz Entry o nazwie LoginEntry
-            var password = entryPassword.Text;  // Załóżmy, że masz Entry o nazwie PasswordEntry
-
-            // Twój obiekt Firebase
+            var login = entryLogin.Text;
+            var password = entryPassword.Text;
 
             // Sprawdzamy, czy login i hasło są poprawne
             var user = await firebase.LoginAsync(login, password);
@@ -48,5 +46,9 @@ namespace BibliotekaPro.Views
             }
         }
 
+        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            Application.Current.MainPage = new CreateAccount();
+        }
     }
 }

@@ -3,38 +3,98 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BibliotekaPro.Views.LoginPage">
     <ContentPage.Content>
-        <StackLayout Padding="30" WidthRequest="500" HeightRequest="1000" BackgroundColor="Blue" x:Name="stackLayoutLogin">
 
-            <!-- Etykieta Tytułu -->
-            <Label Text="Zaloguj się"
-                   x:Name="labelZalogujsie"
-               FontSize="Large"
-               HorizontalOptions="Center" />
 
-            <!-- Pole na login -->
-            <Entry x:Name="entryLogin"
-               Placeholder="Login"
-               Keyboard="Email"
-               Margin="0,20,0,0" />
+        <StackLayout BackgroundColor="blue">
 
-            <!-- Pole na hasło -->
-            <Entry x:Name="entryPassword"
-               Placeholder="Hasło"
-               IsPassword="True" />
 
-            <!-- Przycisk logowania -->
-            <Button Text="Zaloguj się"
-                BackgroundColor="#4CAF50"
-                TextColor="White"
-                Margin="0,20,0,0"
-                 Clicked="Button_Clicked"/>
+            <!-- Logo -->
+            <Image Source="icon_books.png" Margin="30" HeightRequest="100" WidthRequest="100" VerticalOptions="Center" />
 
-            <!-- Link do rejestracji -->
-            <Label Text="Nie masz konta? Zarejestruj się"
-               TextColor="Blue"
-               HorizontalOptions="Center"
-               Padding="0,20,0,0" />
+            <!-- Title -->
+            <Label Text="LIBRARY" 
+       FontSize="30" 
+       TextColor="White" 
+       HorizontalOptions="Center" />
+            <Label Text="Stay with us for a while" 
+       FontSize="18" 
+       TextColor="White" 
+       HorizontalOptions="Center" />
+            <Frame CornerRadius="20" 
+       HasShadow="True"
+       BackgroundColor="White"
+       Padding="10" 
+       Margin="40">
+                <!-- Welcome Message -->
+                <StackLayout Padding="40" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" BackgroundColor="White">
+                    <Label Text="Welcome Back!" 
+FontSize="24" 
+FontAttributes="Bold" 
+TextColor="Blue" 
+HorizontalOptions="Center" 
+Margin="0,20,0,10" />
+                    <Label Text="Login to your account" 
+FontSize="16" 
+TextColor="White" 
+HorizontalOptions="Center" 
+Margin="0,0,0,20" />
+
+                    <!-- Username Entry -->
+                    <Entry Placeholder="Username" 
+x:Name="entryLogin"
+TextColor="Black" 
+PlaceholderColor="Gray" 
+BackgroundColor="White" 
+Margin="0,0,0,10" />
+
+                    <!-- Password Entry -->
+                    <Entry Placeholder="Password" 
+    x:Name="entryPassword"
+TextColor="Black" 
+PlaceholderColor="Gray" 
+BackgroundColor="White" 
+IsPassword="True" 
+Margin="0,0,0,20" />
+
+                    <!-- Login Button -->
+                    <Button Text="LOGIN" 
+ TextColor="White" 
+ BackgroundColor="#0056A1" 
+ CornerRadius="25" 
+ HeightRequest="50" 
+ FontAttributes="Bold" 
+ HorizontalOptions="FillAndExpand"
+     Clicked="Button_Clicked"/>
+
+                    <!-- Navigation Options -->
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,20,0,0">
+                        <Label Text="Forget Password" 
+    FontSize="14" 
+    TextColor="White" 
+    HorizontalOptions="Center" />
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,10,0,0">
+                        <Label Text="Don't have an account?" 
+    FontSize="14" 
+    TextColor="Blue" />
+                        <Label Text=" Sign up here" 
+                            FontSize="14" 
+    TextColor="#FFA500" 
+    FontAttributes="Bold">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </StackLayout>
+                </StackLayout>
+
+
+
+            </Frame>
+
 
         </StackLayout>
+
     </ContentPage.Content>
 </ContentPage>
