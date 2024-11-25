@@ -38,8 +38,7 @@ namespace BibliotekaPro.Views
                 // Zmiana strony głównej na AppShell
                 Application.Current.MainPage = new AppShell();
 
-                // Pokazujemy komunikat o udanym logowaniu
-                await DisplayAlert("Success", "Logged in successfully", "OK");
+
             }
             else
             {

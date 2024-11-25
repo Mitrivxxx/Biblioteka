@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
@@ -22,7 +23,7 @@ namespace BibliotekaPro.Views
             string name = entryName.Text;
             string name_2 = entryName_2.Text;
             string email = entryEmail.Text;
-            string login = entryName.Text;
+            string login = entryLogin.Text;
             string password = entryPassword.Text;
             string password_2 = entryPassword_2.Text;
             bool flag = true;
@@ -34,6 +35,13 @@ namespace BibliotekaPro.Views
             errPassword_22.Text = "";
 
 
+            var regexImie = new Regex("^[A-Z][a-z]{2,}$");
+            var regexNazwisko = new Regex("^[A-Z][a-z]{2,}$");
+            var regexEmail = new Regex("^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$");
+            var regexhaslo = new Regex("^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{4,}$");
+            var regexLogin = new Regex("^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{4,}$");
+
+
 
             if (string.IsNullOrEmpty(name))
             {
@@ -41,11 +49,29 @@ namespace BibliotekaPro.Views
                 errName.TextColor = Color.Red;
                 flag = false;
             }
+            else
+            {
+                if (!regexImie.IsMatch(name))
+                {
+                    errName.Text = "The first letter must be capitalized";
+                    errName.TextColor = Color.Red;
+                    flag = false;
+                }
+            }
             if (string.IsNullOrEmpty(name_2))
             {
                 errSurname.Text = "Please enter your surname";
                 errSurname.TextColor = Color.Red;
                 flag = false;
+            }
+            else
+            {
+                if (!regexNazwisko.IsMatch(name_2))
+                {
+                    errSurname.Text = "The first letter must be capitalized";
+                    errSurname.TextColor = Color.Red;
+                    flag = false;
+                }
             }
             if (string.IsNullOrEmpty(email))
             {
@@ -53,32 +79,54 @@ namespace BibliotekaPro.Views
                 errEmail.TextColor = Color.Red;
                 flag = false;
             }
+            else
+            {
+                if (!regexEmail.IsMatch(email))
+                {
+                    errEmail.Text = "Your email is incorrect";
+                    errEmail.TextColor = Color.Red;
+                    flag = false;
+                }
+            }
+
             if (string.IsNullOrEmpty(login))
             {
                 errLogin.Text = "Please enter your login";
                 errLogin.TextColor = Color.Red;
                 flag = false;
             }
+            else
+            {
+                if (!regexhaslo.IsMatch(login))
+                {
+                    errLogin.Text = "Your Login should contain at least 4 characters 1 lowercase letter 1 uppercase letter and 1 number";
+                    errLogin.TextColor = Color.Red;
+                    flag = false;
+                }
+            }
+
             if (string.IsNullOrEmpty(password))
             {
                 errPassword.Text = "Please enter your password";
                 errPassword.TextColor = Color.Red;
                 flag = false;
             }
-            if (errPassword.Text != errPassword_22.Text)
+            else
+            {
+                if (!regexhaslo.IsMatch(password))
+                {
+                    errPassword.Text = "Your password should contain at least 4 characters 1 lowercase letter 1 uppercase letter and 1 number";
+                    errPassword.TextColor = Color.Red;
+                    flag = false;
+                }
+            }
+            if (entryPassword.Text != entryPassword_2.Text)
             {
                 errPassword_22.Text = "Your password is incorrect";
                 errPassword_22.TextColor = Color.Red;
                 flag = false;
             }
-/*            if (string.IsNullOrEmpty(password_2))
-            {
 
-                errPassword_22.Text = "Please enter your password";
-                errPassword_22.TextColor = Color.Red;
-
-               flag = false;
-            }*/
 
 
             if (flag==true)
