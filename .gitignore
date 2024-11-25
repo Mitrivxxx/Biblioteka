@@ -23,6 +23,7 @@ mono_crash.*
 .project
 .idea/
 .DS_Store
+*.png
 
 # macOS
 *.DS_Store

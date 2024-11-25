@@ -13,7 +13,7 @@ namespace BibliotekaPro
         private readonly ILightSensorService _lightSensorService;
         private LoginPage _loginPage;
         private UsersPage _usersPage;
-
+        //cos
         public AppShell()
         {
             InitializeComponent();
