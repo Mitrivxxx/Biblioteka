@@ -36,11 +36,15 @@ namespace BibliotekaPro
                 // Ustawiamy dane użytkownika w Label
                 var userNameLabel = this.FindByName<Label>("UserNameLabel");
                 var userEmailLabel = this.FindByName<Label>("UserEmailLabel");
+                var userLoginLabel = this.FindByName<Label>("UserLoginLabel");
+
 
                 if (userNameLabel != null && userEmailLabel != null)
                 {
-                    userNameLabel.Text = $"Name: {user.Name}";
+                    userNameLabel.Text = user.Name;
                     userEmailLabel.Text = $"Email: {user.Email}";
+                    userLoginLabel.Text = $"Login: {user.Login}";
+
                 }
             }
             else

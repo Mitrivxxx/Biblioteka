@@ -26,6 +26,15 @@ namespace BibliotekaPro.Views
             string password = entryPassword.Text;
             string password_2 = entryPassword_2.Text;
             bool flag = true;
+            errName.Text = "";
+            errSurname.Text = "";
+            errEmail.Text = "";
+            errLogin.Text = "";
+            errPassword.Text = "";
+            errPassword_22.Text = "";
+
+
+
             if (string.IsNullOrEmpty(name))
             {
                 errName.Text = "Please enter your name";
@@ -56,20 +65,20 @@ namespace BibliotekaPro.Views
                 errPassword.TextColor = Color.Red;
                 flag = false;
             }
-            if (errPassword != errPassword_22)
+            if (errPassword.Text != errPassword_22.Text)
             {
                 errPassword_22.Text = "Your password is incorrect";
                 errPassword_22.TextColor = Color.Red;
                 flag = false;
             }
-            if (string.IsNullOrEmpty(password_2))
+/*            if (string.IsNullOrEmpty(password_2))
             {
 
                 errPassword_22.Text = "Please enter your password";
                 errPassword_22.TextColor = Color.Red;
 
                flag = false;
-            }
+            }*/
 
 
             if (flag==true)

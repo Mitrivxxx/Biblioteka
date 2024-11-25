@@ -81,10 +81,56 @@
     <FlyoutItem Title="User Info" Icon="icon_camera">
         <ShellContent Route="LoginUserInformation" Title="User Info">
             <ContentPage>
-                <StackLayout Padding="20">
-                    <Label TextColor="black" x:Name="UserNameLabel" FontSize="Large" />
-                    <Label TextColor="black" x:Name="UserEmailLabel" FontSize="Large" />
-                </StackLayout>
+
+                <ScrollView>
+
+                    <StackLayout Padding="30" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" BackgroundColor="Blue" HeightRequest="1000" WidthRequest="400">
+                        <!-- Title -->
+                            <Label Text="Welcome! " 
+                               FontSize="40" 
+                               TextColor="White" 
+                               HorizontalOptions="Center" />
+                            <Label 
+                               x:Name="UserNameLabel"            
+                               FontSize="40" 
+                               TextColor="White" 
+                               HorizontalOptions="Center" 
+                               Margin="0,0,0,20" />
+                        <!-- Image -->
+                        <Frame CornerRadius="100" 
+                           BorderColor="Black" 
+                           Padding="0" 
+                           WidthRequest="220" 
+                           HeightRequest="220" 
+                               VerticalOptions="Center"
+                               HorizontalOptions="Center"
+                           IsClippedToBounds="True">
+                            <Image Source="your_image.png" 
+                            Aspect="AspectFill" />
+                        </Frame>
+
+                        <Label HorizontalOptions="Center" TextColor="White" x:Name="UserEmailLabel" FontSize="20" />
+                        <Label HorizontalOptions="Center" TextColor="White" x:Name="UserLoginLabel" FontSize="20" />
+                        <Frame CornerRadius="20"
+                               HasShadow="True"
+                               BackgroundColor="White"
+                               Padding="20"
+                               Margin="20">
+                                <StackLayout>
+                                <Label Text="Yours books: " 
+                            FontSize="24" 
+                            FontAttributes="Bold" 
+                            TextColor="Blue" 
+                            HorizontalOptions="Center" 
+                            Margin="0,20,0,10" />
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                </ScrollView>
+
+
+
+
             </ContentPage>
         </ShellContent>
     </FlyoutItem>
