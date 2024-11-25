@@ -28,34 +28,49 @@ namespace BibliotekaPro.Views
             bool flag = true;
             if (string.IsNullOrEmpty(name))
             {
-                await DisplayAlert("Warning", "Please enter your name", "Cancel");
+                errName.Text = "Please enter your name";
+                errName.TextColor = Color.Red;
                 flag = false;
             }
             if (string.IsNullOrEmpty(name_2))
             {
-                await DisplayAlert("Warning", "Please enter your surname", "Cancel");
+                errSurname.Text = "Please enter your surname";
+                errSurname.TextColor = Color.Red;
                 flag = false;
             }
             if (string.IsNullOrEmpty(email))
             {
-                await DisplayAlert("Warning", "Please enter your email", "Cancel");
+                errEmail.Text = "Please enter your email";
+                errEmail.TextColor = Color.Red;
                 flag = false;
             }
             if (string.IsNullOrEmpty(login))
             {
-                await DisplayAlert("Warning", "Please enter your login", "Cancel");
+                errLogin.Text = "Please enter your login";
+                errLogin.TextColor = Color.Red;
                 flag = false;
             }
             if (string.IsNullOrEmpty(password))
             {
-                await DisplayAlert("Warning", "Please enter your password", "Cancel");
+                errPassword.Text = "Please enter your password";
+                errPassword.TextColor = Color.Red;
+                flag = false;
+            }
+            if (errPassword != errPassword_22)
+            {
+                errPassword_22.Text = "Your password is incorrect";
+                errPassword_22.TextColor = Color.Red;
                 flag = false;
             }
             if (string.IsNullOrEmpty(password_2))
             {
-                await DisplayAlert("Warning", "Please enter your password", "Cancel");
-                flag = false;
+
+                errPassword_22.Text = "Please enter your password";
+                errPassword_22.TextColor = Color.Red;
+
+               flag = false;
             }
+
 
             if (flag==true)
             {

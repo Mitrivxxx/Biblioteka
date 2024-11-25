@@ -3,97 +3,89 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BibliotekaPro.Views.LoginPage">
     <ContentPage.Content>
-
-
         <StackLayout BackgroundColor="blue">
-
-
             <!-- Logo -->
             <Image Source="icon_books.png" Margin="30" HeightRequest="100" WidthRequest="100" VerticalOptions="Center" />
 
             <!-- Title -->
             <Label Text="LIBRARY" 
-       FontSize="30" 
-       TextColor="White" 
-       HorizontalOptions="Center" />
+                   FontSize="30" 
+                   TextColor="White" 
+                   HorizontalOptions="Center" />
             <Label Text="Stay with us for a while" 
-       FontSize="18" 
-       TextColor="White" 
-       HorizontalOptions="Center" />
+                   FontSize="18" 
+                   TextColor="White" 
+                   HorizontalOptions="Center" />
+
             <Frame CornerRadius="20" 
-       HasShadow="True"
-       BackgroundColor="White"
-       Padding="10" 
-       Margin="40">
+                   HasShadow="True"
+                   BackgroundColor="White"
+                   Padding="10" 
+                   Margin="40">
                 <!-- Welcome Message -->
                 <StackLayout Padding="40" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" BackgroundColor="White">
                     <Label Text="Welcome Back!" 
-FontSize="24" 
-FontAttributes="Bold" 
-TextColor="Blue" 
-HorizontalOptions="Center" 
-Margin="0,20,0,10" />
+                           FontSize="24" 
+                           FontAttributes="Bold" 
+                           TextColor="Blue" 
+                           HorizontalOptions="Center" 
+                           Margin="0,20,0,10" />
                     <Label Text="Login to your account" 
-FontSize="16" 
-TextColor="White" 
-HorizontalOptions="Center" 
-Margin="0,0,0,20" />
+                           FontSize="16" 
+                           TextColor="Gray" 
+                           HorizontalOptions="Center" 
+                           Margin="0,0,0,20" />
 
                     <!-- Username Entry -->
                     <Entry Placeholder="Username" 
-x:Name="entryLogin"
-TextColor="Black" 
-PlaceholderColor="Gray" 
-BackgroundColor="White" 
-Margin="0,0,0,10" />
+                           x:Name="entryLogin"
+                           TextColor="Black" 
+                           PlaceholderColor="Gray" 
+                           BackgroundColor="White" 
+                           Margin="0,0,0,10" />
 
                     <!-- Password Entry -->
                     <Entry Placeholder="Password" 
-    x:Name="entryPassword"
-TextColor="Black" 
-PlaceholderColor="Gray" 
-BackgroundColor="White" 
-IsPassword="True" 
-Margin="0,0,0,20" />
+                           x:Name="entryPassword"
+                           TextColor="Black" 
+                           PlaceholderColor="Gray" 
+                           BackgroundColor="White" 
+                           IsPassword="True" 
+                           Margin="0,0,0,20" />
 
                     <!-- Login Button -->
                     <Button Text="LOGIN" 
- TextColor="White" 
- BackgroundColor="#0056A1" 
- CornerRadius="25" 
- HeightRequest="50" 
- FontAttributes="Bold" 
- HorizontalOptions="FillAndExpand"
-     Clicked="Button_Clicked"/>
+                            TextColor="White" 
+                            BackgroundColor="#0056A1" 
+                            CornerRadius="25" 
+                            HeightRequest="50" 
+                            FontAttributes="Bold" 
+                            HorizontalOptions="FillAndExpand"
+                            Clicked="Button_Clicked" />
 
                     <!-- Navigation Options -->
                     <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,20,0,0">
                         <Label Text="Forget Password" 
-    FontSize="14" 
-    TextColor="White" 
-    HorizontalOptions="Center" />
+                               FontSize="14" 
+                               TextColor="White" 
+                               HorizontalOptions="Center" />
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,10,0,0">
                         <Label Text="Don't have an account?" 
-    FontSize="14" 
-    TextColor="Blue" />
+                               FontSize="14" 
+                               TextColor="Blue" />
                         <Label Text=" Sign up here" 
-                            FontSize="14" 
-    TextColor="#FFA500" 
-    FontAttributes="Bold">
+                               FontSize="14" 
+                               TextColor="#FFA500" 
+                               FontAttributes="Bold">
                             <Label.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
                             </Label.GestureRecognizers>
                         </Label>
                     </StackLayout>
                 </StackLayout>
-
-//
-
             </Frame>
-
-
         </StackLayout>
 
     </ContentPage.Content>
