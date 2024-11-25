@@ -23,7 +23,7 @@
                                     <Setter Property="BackgroundColor" Value="#332196F3" />
                                 </VisualState.Setters>
                             </VisualState>
-                        </VisualStateGroup>
+             
                     </VisualStateGroupList>
                 </Setter>
             </Style>
