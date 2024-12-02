@@ -2,9 +2,13 @@
 using BibliotekaPro.ViewModels;
 using BibliotekaPro.Views;
 using Newtonsoft.Json;
+using Plugin.Fingerprint;
+using Plugin.Fingerprint.Abstractions;
 using System;
 using System.Collections.Generic;
 using Xamarin.Forms;
+
+
 
 namespace BibliotekaPro
 {
@@ -44,6 +48,16 @@ namespace BibliotekaPro
                     userNameLabel.Text = user.Name;
                     userEmailLabel.Text = $"Email: {user.Email}";
                     userLoginLabel.Text = $"Login: {user.Login}";
+
+                }
+
+                if(user.Name !="admin")
+                {
+                   // goUserPage.IsVisible = false;
+                }
+                else
+                {
+                   // goUserPage.IsVisible = false;
 
                 }
             }
@@ -87,5 +101,39 @@ namespace BibliotekaPro
             await Shell.Current.GoToAsync("//LoginPage");
         }
 
+
+        private async void MenuItem_Clicked(object sender, EventArgs e)
+        {
+            var result = await CrossFingerprint.Current.AuthenticateAsync(new AuthenticationRequestConfiguration(
+        "Autoryzacja biometryczna",
+        "Użyj odcisku palca, aby przejść dalej"));
+
+            if (result.Authenticated)
+            {
+                // Przejdź do nowej strony
+                await Navigation.PushAsync(new UsersPage());
+            }
+            else
+            {
+                await DisplayAlert("Błąd", "Autoryzacja nie powiodła się", "OK");
+            }
+        }
+
+        private async void MenuItem_Clicked_1(object sender, EventArgs e)
+        {
+            var result = await CrossFingerprint.Current.AuthenticateAsync(new AuthenticationRequestConfiguration(
+            "Autoryzacja biometryczna",
+            "Użyj odcisku palca, aby przejść dalej"));
+
+            if (result.Authenticated)
+            {
+                // Przejdź do nowej strony
+                await Navigation.PushAsync(new BooksPage());
+            }
+            else
+            {
+                await DisplayAlert("Błąd", "Autoryzacja nie powiodła się", "OK");
+            }
+        }
     }
 }

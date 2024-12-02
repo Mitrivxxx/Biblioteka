@@ -27,6 +27,7 @@ namespace BibliotekaPro.Droid
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());
+            Plugin.Fingerprint.CrossFingerprint.SetCurrentActivityResolver(() => Xamarin.Essentials.Platform.CurrentActivity);
 
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Permission[] grantResults)
@@ -42,6 +43,9 @@ namespace BibliotekaPro.Droid
 
             Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
             PermissionsImplementation.Current.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+
+
+            base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
     
         //zdjecia

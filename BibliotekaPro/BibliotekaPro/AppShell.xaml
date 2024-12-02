@@ -140,12 +140,12 @@
     <FlyoutItem Title="Browse" Icon="icon_feed.png">
         <ShellContent Route="ItemsPage" ContentTemplate="{DataTemplate local:ItemsPage}" />
     </FlyoutItem>
-    <FlyoutItem Title="Users" Icon="icon_users">
-        <ShellContent Route="UsersPage" ContentTemplate="{DataTemplate local:UsersPage}" />
-    </FlyoutItem>
-    <FlyoutItem Title="Books" Icon="icon_books">
-        <ShellContent Route="BooksPage" ContentTemplate="{DataTemplate local:BooksPage}" />
-    </FlyoutItem>
+    
+
+    
+        <MenuItem x:Name="goUserPage" Text="Users" IconImageSource="icon_users" Clicked="MenuItem_Clicked" />
+        <MenuItem x:Name="goBooskPage"  Text="Books" IconImageSource="icon_books" Clicked="MenuItem_Clicked_1"></MenuItem>
+
     <FlyoutItem Title="Camera" Icon="icon_camera">
         <ShellContent Route="Camera" ContentTemplate="{DataTemplate local:Camera}" />
     </FlyoutItem>
