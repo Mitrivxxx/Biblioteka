@@ -18,8 +18,8 @@ using Xamarin.Forms.Xaml;
 using Color = Xamarin.Forms.Color;
 using SkiaSharp;
 
-
 namespace BibliotekaPro.Views
+
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Camera : ContentPage
@@ -101,7 +101,7 @@ namespace BibliotekaPro.Views
                 var savedFilePath = await SavePhotoAsync(photo);
                 await DisplayAlert("Sukces", $"Zdjęcie zapisano w: {savedFilePath}", "OK");
 
-                // Wyświetl zdjęcie w Image (jeśli masz kontrolkę Image na stronie)
+                // Wyświetl zdjęcie w Image
                 var stream = await photo.OpenReadAsync();
                 FotoProduto.Source = ImageSource.FromStream(() => stream);
             }
@@ -114,7 +114,7 @@ namespace BibliotekaPro.Views
                 await DisplayAlert("Błąd", $"Coś poszło nie tak: {ex.Message}", "OK");
             }
         }
-        //zdjecie zapisuje sie (niewiem gdzie)
+        //zdjecie zapisuje sie
 /*        private async Task<string> SavePhotoAsync(FileResult photo)
         {
             // Pobierz ścieżkę do lokalnego katalogu na urządzeniu
