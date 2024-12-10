@@ -13,6 +13,7 @@
 
     <Shell.Resources>
         <ResourceDictionary>
+            
             <Style x:Key="BaseStyle" TargetType="Element">
                 <Setter Property="Shell.BackgroundColor" Value="{StaticResource Primary}" />
                 <Setter Property="Shell.ForegroundColor" Value="White" />
@@ -25,7 +26,14 @@
                 <Setter Property="Shell.TabBarTitleColor" Value="White"/>
             </Style>
             <Style TargetType="TabBar" BasedOn="{StaticResource BaseStyle}" />
-            <Style TargetType="FlyoutItem" BasedOn="{StaticResource BaseStyle}" />
+            
+            <Style TargetType="FlyoutItem">
+                <Setter Property="Shell.BackgroundColor" Value="#34495E" />
+                <Setter Property="Shell.ForegroundColor" Value="White" />
+                <Setter Property="Shell.TitleColor" Value="#ECF0F1" />
+                <Setter Property="Shell.DisabledColor" Value="#7F8C8D" />
+                <Setter Property="Shell.UnselectedColor" Value="#BDC3C7" />
+            </Style>
 
             <!--
             Default Styles for all Flyout Items
@@ -78,7 +86,14 @@
         FlyoutDisplayOptions="AsMultipleItems" will create a separate flyout item for each child element    
         https://docs.microsoft.com/dotnet/api/xamarin.forms.shellgroupitem.flyoutdisplayoptions?view=xamarin-forms
     -->
-    <FlyoutItem Title="User Info" Icon="icon_camera">
+    <Shell.FlyoutHeader>
+        <Grid Padding="20">
+            <Image Source="logo" HeightRequest="100" WidthRequest="80" />
+            <Label Margin="50,90,0,0" Text="Welcome, Admin" TextColor="Black" FontSize="24" VerticalOptions="Center" HorizontalOptions="Start" />
+        </Grid>
+    </Shell.FlyoutHeader>
+
+    <FlyoutItem Icon="profile" Title="User Info">
         <ShellContent Route="LoginUserInformation" Title="User Info">
             <ContentPage>
 
@@ -134,26 +149,23 @@
             </ContentPage>
         </ShellContent>
     </FlyoutItem>
-    <FlyoutItem Title="About" Icon="icon_about.png">
-        <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate local:AboutPage}" />
-    </FlyoutItem>
-    <FlyoutItem Title="Browse" Icon="icon_feed.png">
-        <ShellContent Route="ItemsPage" ContentTemplate="{DataTemplate local:ItemsPage}" />
-    </FlyoutItem>
     
 
-    
-        <MenuItem x:Name="goUserPage" Text="Users" IconImageSource="icon_users" Clicked="MenuItem_Clicked" />
-        <MenuItem x:Name="goBooskPage"  Text="Books" IconImageSource="icon_books" Clicked="MenuItem_Clicked_1"></MenuItem>
+    <FlyoutItem x:Name="usersPageAdmin" Title="Users" Icon="icon_users">
+        <ShellContent Route="biometriaPage" ContentTemplate="{DataTemplate local:biometriaPage}" />
+    </FlyoutItem>
+    <FlyoutItem x:Name="booksPageAdmin" Title="Books" Icon="icon_books">
+        <ShellContent Route="biometriaPagev2" ContentTemplate="{DataTemplate local:biometriaPagev2}" />
+    </FlyoutItem>
+    <FlyoutItem x:Name="BooksPageForUser" Title="Books" Icon="icon_books">
+        <ShellContent Route="BooksPageForUser" ContentTemplate="{DataTemplate local:BooksPageForUser}" />
+    </FlyoutItem>
 
     <FlyoutItem Title="Camera" Icon="icon_camera">
         <ShellContent Route="Camera" ContentTemplate="{DataTemplate local:Camera}" />
     </FlyoutItem>
-    <FlyoutItem Title="User info" Icon="icon_camera">
-        <ShellContent Route="LoginUserInformation" ContentTemplate="{DataTemplate local:LoginUserInformation}" />
-    </FlyoutItem>
 
-    <MenuItem Text="Logout" StyleClass="MenuItemLayoutStyle" Clicked="OnMenuItemClicked">
+    <MenuItem IconImageSource="logout" Text="Logout" StyleClass="MenuItemLayoutStyle" Clicked="OnMenuItemClicked">
     </MenuItem>
 
 

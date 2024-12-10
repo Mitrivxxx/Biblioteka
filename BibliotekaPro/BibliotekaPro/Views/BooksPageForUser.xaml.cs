@@ -10,13 +10,14 @@ using Xamarin.Forms.Xaml;
 namespace BibliotekaPro.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class BooksPage : ContentPage
+    public partial class BooksPageForUser : ContentPage
     {
-        Firebase firebase = new Firebase();
-        public BooksPage()
+        public BooksPageForUser()
         {
             InitializeComponent();
         }
+        Firebase firebase = new Firebase();
+
         protected override async void OnAppearing()
         {
             var book = await firebase.GetAll<Book>();
@@ -40,10 +41,6 @@ namespace BibliotekaPro.Views
             var book = e.Item as Book;
             Navigation.PushModalAsync(new InfoPage(book));
             ((ListView)sender).SelectedItem = null;
-        }
-        private void ToolbarItem_Clicked(object sender, EventArgs e)
-        {
-            Navigation.PushModalAsync(new AddPage_book());
         }
 
         private void tapEdit_Tapped(object sender, EventArgs e)

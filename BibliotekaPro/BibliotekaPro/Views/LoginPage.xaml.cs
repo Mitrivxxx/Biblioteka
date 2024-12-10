@@ -48,7 +48,7 @@ namespace BibliotekaPro.Views
 
         private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
-            Application.Current.MainPage = new CreateAccount();
+            Application.Current.MainPage = new CreateAccountv2();
         }
     }
 }

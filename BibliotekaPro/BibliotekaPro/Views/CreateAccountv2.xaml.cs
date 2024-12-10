@@ -11,9 +11,9 @@ using Xamarin.Forms.Xaml;
 namespace BibliotekaPro.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class CreateAccount : ContentPage
+    public partial class CreateAccountv2 : ContentPage
     {
-        public CreateAccount()
+        public CreateAccountv2()
         {
             InitializeComponent();
         }
@@ -129,7 +129,7 @@ namespace BibliotekaPro.Views
 
 
 
-            if (flag==true)
+            if (flag == true)
             {
                 string fulname = name + " " + name_2;
 
@@ -146,12 +146,12 @@ namespace BibliotekaPro.Views
                 }
                 Clear();
             }
-            
+
 
 
         }
 
-            
+
         public void Clear()
         {
             entryName.Text = "";

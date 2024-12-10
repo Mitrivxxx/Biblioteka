@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BibliotekaPro.Views.CreateAccountv2">
+
+    <!-- Przyciski na wierzchu -->
+    <Grid>
+
+        <ScrollView>
+
+            <StackLayout Padding="30" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" BackgroundColor="Blue" HeightRequest="1000" WidthRequest="400">
+                <!-- Logo -->
+
+                <Frame
+CornerRadius="100" 
+            Padding="0"
+            
+            HeightRequest="180"
+WidthRequest="180"
+BorderColor="Blue"
+BackgroundColor="White"
+VerticalOptions="Center"
+HorizontalOptions="Center">
+
+                    <Image 
+    Source="logo.png" 
+    Aspect="AspectFill" 
+                HeightRequest="100"
+    WidthRequest="100" />
+                </Frame>
+                <!-- Title -->
+                <Label Text="CREATE AN ACCOUNT" 
+                   FontSize="30" 
+                   TextColor="White" 
+                   HorizontalOptions="Center" />
+                <Label Text="Stay with us for a while" 
+                   FontSize="18" 
+                   TextColor="White" 
+                   HorizontalOptions="Center" 
+                   Margin="0,0,0,20" />
+                <Frame CornerRadius="20"
+           HasShadow="True"
+           BackgroundColor="White"
+           Padding="20"
+           Margin="20">
+                    <StackLayout>
+                        <Label Text="Welcome!" 
+FontSize="24" 
+FontAttributes="Bold" 
+TextColor="Blue" 
+HorizontalOptions="Center" 
+Margin="0,20,0,10" />
+                        <Entry Placeholder="Name"
+                           x:Name="entryName"
+                   TextColor="Black" 
+                   PlaceholderColor="Gray" 
+                   BackgroundColor="White" 
+                   Margin="0,0,0,10" />
+                        <Label x:Name="errName"></Label>
+
+                        <!-- Surname Entry -->
+                        <Entry Placeholder="Surname" 
+                   x:Name="entryName_2"
+                   TextColor="Black" 
+                   PlaceholderColor="Gray" 
+                   BackgroundColor="White" 
+                   Margin="0,0,0,10" />
+                        <Label x:Name="errSurname"></Label>
+
+                        <!-- Email Entry -->
+                        <Entry Placeholder="Email" 
+                   x:Name="entryEmail"
+                   TextColor="Black" 
+                   PlaceholderColor="Gray" 
+                   BackgroundColor="White" 
+                   Keyboard="Email" 
+                   Margin="0,0,0,10" />
+                        <Label x:Name="errEmail"></Label>
+
+                        <!-- Login Entry -->
+                        <Entry Placeholder="Login" 
+                   x:Name="entryLogin"
+                   TextColor="Black" 
+                   PlaceholderColor="Gray" 
+                   BackgroundColor="White" 
+                   Margin="0,0,0,10" />
+                        <Label x:Name="errLogin"></Label>
+
+                        <!-- Password Entry -->
+                        <Entry Placeholder="Password" 
+                   x:Name="entryPassword"
+                   TextColor="Black" 
+                   PlaceholderColor="Gray" 
+                   BackgroundColor="White" 
+                   IsPassword="True" 
+                   Margin="0,0,0,20" />
+                        <Label x:Name="errPassword"></Label>
+                        <Entry Placeholder="Confirm password" 
+                   x:Name="entryPassword_2"
+                   TextColor="Black" 
+                   PlaceholderColor="Gray" 
+                   BackgroundColor="White" 
+                   IsPassword="True" 
+                   Margin="0,0,0,20" />
+                        <Label x:Name="errPassword_22"></Label>
+
+                        <!-- Create Account Button -->
+                        <Button Text="UTWÓRZ KONTO" 
+                    TextColor="White" 
+                    BackgroundColor="#0056A1" 
+                    CornerRadius="25" 
+                    HeightRequest="50" 
+                    FontAttributes="Bold" 
+                    HorizontalOptions="FillAndExpand" 
+                    Clicked="Button_Clicked"
+                    />
+
+                    </StackLayout>
+                    <!-- Name Entry -->
+
+
+                </Frame>
+
+
+
+            </StackLayout>
+
+
+        </ScrollView>
+        <Button 
+        ImageSource="back.png"
+        TextColor="White" 
+        BackgroundColor="White" 
+        CornerRadius="25" 
+        HeightRequest="50"
+        WidthRequest="50"
+        Clicked="Button_Clicked_1"
+        VerticalOptions="Start"
+        HorizontalOptions="Start"
+        Margin="10" />
+    </Grid>
+</ContentPage>

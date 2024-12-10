@@ -22,7 +22,6 @@ namespace BibliotekaPro
         {
             InitializeComponent();
             Routing.RegisterRoute("LoginUserInformation", typeof(LoginUserInformation));
-            Routing.RegisterRoute("CreateAccount", typeof(CreateAccount));
             Routing.RegisterRoute(nameof(ItemDetailPage), typeof(ItemDetailPage));
             Routing.RegisterRoute(nameof(NewItemPage), typeof(NewItemPage));
             Routing.RegisterRoute("appshell", typeof(AppShell));
@@ -51,13 +50,17 @@ namespace BibliotekaPro
 
                 }
 
-                if(user.Name !="admin")
+                if (user.Name != "admin" && user.Email != "admin" && user.Password != "admin")
                 {
-                   // goUserPage.IsVisible = false;
+                    usersPageAdmin.IsVisible = false;
+                    booksPageAdmin.IsVisible = false;
+                    BooksPageForUser.IsVisible = true;
                 }
                 else
                 {
-                   // goUserPage.IsVisible = false;
+                    usersPageAdmin.IsVisible = true;
+                    booksPageAdmin.IsVisible = true;
+                    BooksPageForUser.IsVisible = false;
 
                 }
             }
@@ -67,29 +70,28 @@ namespace BibliotekaPro
                 Console.WriteLine("User not found in Application Properties.");
             }
         }
+        /*       public void _lightSensorService_LightSensorChanged(object sender, float e)
+               {
+                   // Ustal, czy jest dzień czy noc na podstawie natężenia światła (lightLevel)
+                   if (e > 500) // Próg światła, który można dostosować w zależności od potrzeb
+                   {
+                       // Jest dzień
+                       //DisplayAlert("dzien", e.ToString(), "OK");
 
- /*       public void _lightSensorService_LightSensorChanged(object sender, float e)
-        {
-            // Ustal, czy jest dzień czy noc na podstawie natężenia światła (lightLevel)
-            if (e > 500) // Próg światła, który można dostosować w zależności od potrzeb
-            {
-                // Jest dzień
-                //DisplayAlert("dzien", e.ToString(), "OK");
+                   }
+                   else
+                   {
+                       // Jest noc
+                       //DisplayAlert("Noc", e.ToString(), "OK");
 
-            }
-            else
-            {
-                // Jest noc
-                //DisplayAlert("Noc", e.ToString(), "OK");
+                   }
+               }
 
-            }
-        }
-
-        protected override void OnDisappearing()
-        {
-            base.OnDisappearing();
-            _lightSensorService.StopListening();
-        }*/
+               protected override void OnDisappearing()
+               {
+                   base.OnDisappearing();
+                   _lightSensorService.StopListening();
+               }*/
 
         private async void OnMenuItemClicked(object sender, EventArgs e)
         {
@@ -102,22 +104,7 @@ namespace BibliotekaPro
         }
 
 
-        private async void MenuItem_Clicked(object sender, EventArgs e)
-        {
-            var result = await CrossFingerprint.Current.AuthenticateAsync(new AuthenticationRequestConfiguration(
-        "Autoryzacja biometryczna",
-        "Użyj odcisku palca, aby przejść dalej"));
 
-            if (result.Authenticated)
-            {
-                // Przejdź do nowej strony
-                await Navigation.PushAsync(new UsersPage());
-            }
-            else
-            {
-                await DisplayAlert("Błąd", "Autoryzacja nie powiodła się", "OK");
-            }
-        }
 
         private async void MenuItem_Clicked_1(object sender, EventArgs e)
         {
@@ -135,5 +122,6 @@ namespace BibliotekaPro
                 await DisplayAlert("Błąd", "Autoryzacja nie powiodła się", "OK");
             }
         }
+
     }
 }

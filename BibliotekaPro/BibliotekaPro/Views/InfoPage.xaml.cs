@@ -18,5 +18,11 @@ namespace BibliotekaPro.Views
             labelName.Text = user.Name;
             labelEmail.Text = user.Email;
         }
+        public InfoPage(Book book)
+        {
+            InitializeComponent();
+            labelName.Text = book.Name;
+            labelEmail.Text = book.Author;
+        }
     }
 }

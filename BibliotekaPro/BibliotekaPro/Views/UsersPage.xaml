@@ -6,12 +6,39 @@
         <ToolbarItem Text="Add" Clicked="ToolbarItem_Clicked"></ToolbarItem>
         
     </ContentPage.ToolbarItems>
-    
+
     <ContentPage.Content>
+        
+        
         <StackLayout WidthRequest="500" HeightRequest="1000" x:Name="backColor">
-            <SearchBar Placeholder="Search" TextChanged="searchInput_TextChanged" x:Name="searchInput"></SearchBar>
             
-            <ListView IsRefreshing="True" x:Name="UserListView" ItemsSource="{Binding user}" HasUnevenRows="True" ItemTapped="UserListView_ItemTapped">
+                        <!-- -->
+            <StackLayout BackgroundColor="blue">
+
+                <Label Text="Users" 
+                        Margin="0,40,0,0"
+               FontSize="30" 
+               TextColor="White" 
+               HorizontalOptions="Center" />
+                <Label Text="List of our readers" 
+               FontSize="18" 
+               TextColor="White" 
+               HorizontalOptions="Center" />
+
+                <!-- -->
+
+                <Frame CornerRadius="20" 
+       HasShadow="True"
+       BackgroundColor="White"
+       Padding="10" 
+       Margin="40"
+       VerticalOptions="Start"
+                       >
+                    
+                    <StackLayout Padding="20" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" BackgroundColor="White">
+                        <SearchBar Placeholder="Search" TextChanged="searchInput_TextChanged" x:Name="searchInput"></SearchBar>
+
+                        <ListView IsRefreshing="True" x:Name="UserListView" ItemsSource="{Binding user}" HasUnevenRows="True" ItemTapped="UserListView_ItemTapped">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -39,9 +66,12 @@
                 </ListView.ItemTemplate>
             </ListView>
             
+             </StackLayout>
+            </Frame>    
+                        
         </StackLayout>
 
-        
-    
+        </StackLayout>
+
     </ContentPage.Content>
 </ContentPage>

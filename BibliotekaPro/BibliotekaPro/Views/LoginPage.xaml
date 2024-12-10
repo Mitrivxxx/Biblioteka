@@ -5,9 +5,24 @@
     <ContentPage.Content>
         <StackLayout BackgroundColor="blue">
             <!-- Logo -->
-            <Image Source="icon_books.png" Margin="30" HeightRequest="100" WidthRequest="100" VerticalOptions="Center" />
+            <Frame
+    CornerRadius="100" 
+                Padding="0"
+                
+                HeightRequest="180"
+    WidthRequest="180"
+    BorderColor="Blue"
+    BackgroundColor="White"
+    VerticalOptions="Center"
+    HorizontalOptions="Center">
+        
+                <Image 
+        Source="logo.png" 
+        Aspect="AspectFill" 
+                    HeightRequest="100"
+        WidthRequest="100" />
+            </Frame>
 
-            <!-- Title -->
             <Label Text="LIBRARY" 
                    FontSize="30" 
                    TextColor="White" 
