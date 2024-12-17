@@ -9,7 +9,6 @@ using System.Collections.Generic;
 using Xamarin.Forms;
 
 
-
 namespace BibliotekaPro
 {
     public partial class AppShell : Xamarin.Forms.Shell
